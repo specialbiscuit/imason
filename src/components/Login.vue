@@ -4,17 +4,14 @@
     <div v-loading.fullscreen.lock="loading" element-loading-text="Loading..." :element-loading-svg="svg" element-loading-svg-view-box="-10, -10, 50, 50" element-loading-background="rgba(0, 0, 0, 0.7)">
         <div class="container">
             <img src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" />
-            
             <div>
                 <input class="username" name="username" v-model="username" placeholder="username"/>
                 <div class=""><span >{{ errors.username }}</span></div>
             </div>
-
             <div>
                 <input class="password" name="password" v-model="password" type="password" placeholder="password"/>
                 <div class=""><span >{{ errors.password }}</span></div>
             </div>
-            
             <button :disabled="!meta.valid" @click="submit()">
                 登录
             </button>
@@ -35,17 +32,17 @@
     overflow-y: auto;
     background: linear-gradient(to top right, orange, pink);
     padding: 10px;
+}
 
-    img {
+
+img {
         width: 200px;
         height: 200px;
         border-radius: 100%;
         margin-bottom: 50px;
     }
     .username, .password {
-        width: 360px;
-        height: 32px;
-        // border-color:  blue;
+    
         &:hover {
             border-color: red;
         }
@@ -55,6 +52,14 @@
         }
     }
     .username {
+        width: 360px;
+        height: 32px;
+        border-bottom-width: 0;
+    }
+
+    .password {
+        width: 360px;
+        height: 32px;
         border-bottom-width: 0;
     }
 
@@ -70,7 +75,6 @@
         }
         color: white;
     }
-}
 </style>
 
 <script lang="ts" setup>
