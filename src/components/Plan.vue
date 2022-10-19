@@ -1,278 +1,203 @@
 <template>
-    <div class="ttt">
-        <div class="rounded-2xl border-2 w-full" >
-            <div class="flex justify-between">
-                <div class="border-2 w-full" v-for="item in plan">
-                    <div class="bg-blue-300">{{item.week}}</div>
-                    <div>tag</div>
-                    <div>lesson</div>
+    <div class="w-full h-screen bg-blue-100 p-10 flex justify-center items-center min-w-full  max-w-7xl">
+        <div class="w-full grid grid-cols-7 gap-0 text-center font-black">
+            <div class="h-10 bg-blue-200 leading-10 text-white rounded-tl-lg">MON</div>
+            <div class="h-10 bg-blue-200 leading-10 text-white">TUE</div>
+            <div class="h-10 bg-blue-200 leading-10 text-white">WEN</div>
+            <div class="h-10 bg-blue-200 leading-10 text-white">THU</div>
+            <div class="h-10 bg-blue-200 leading-10 text-white">FRI</div>
+            <div class="h-10 bg-blue-200 leading-10 text-white">SAT</div>
+            <div class="h-10 bg-blue-200 leading-10 text-white rounded-tr-lg ">SUN</div>
+
+            <div class="h-15 bg-white leading-10 col-span-5 pt-3 font-black">幼儿园时光</div>
+            <div class="border h-15 bg-white p-2">
+                <p class="leading-5">感统</p><p >10:00~12:00</p>
+            </div>
+            <div class="border h-15 bg-white p-2">
+                <p class="leading-5">英语</p><p >08:50~10:30</p>
+            </div>
+
+            <div class="border h-15 bg-white rounded-bl-lg leading-10">
+                
+            </div>
+            <div class="border h-15 bg-white p-2">
+                <p class="leading-5">画画</p><p >18:30~20:00</p>
+            </div>
+            <div class="border h-15 bg-white p-2">
+                <p class="leading-5">画画</p><p >18:30~20:00</p>
+            </div>
+            <div class="border h-15 bg-white p-2">
+                <p class="leading-5">画画</p><p >18:30~20:00</p>
+            </div>
+            <div class="border h-15 bg-white p-2"></div>
+            <div class="border h-15 bg-white p-2">
+                <p class="leading-5">篮球</p><p >15:10~18:40</p>
+            </div>
+            <div class="border h-15 bg-white rounded-br-lg p-2"></div>
+
+
+            <div class="bg-white rounded-l-lg mt-6 border">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
                 </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>感统1个动作</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>篮球训练</div>
+                </div>
+            </div>
+            <div class="bg-white mt-6 border">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>感统1个动作</div>
+                </div>
+            </div>
+
+            <div class="bg-white mt-6 border">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+            </div>
+            <div class="bg-white mt-6 border">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>感统1个动作</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>感统1个动作</div>
+                </div>
+            </div>
+            <div class="bg-white mt-6 border">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>感统1个动作</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>感统1个动作</div>
+                </div>
+            </div>
+            <div class="bg-white mt-6">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-r-lg mt-6">
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 mr-2"></div>
+                    <div>英语听60min</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 mr-2 "></div>
+                    <div>学能训练1页</div>
+                </div>
+                <div class="flex items-center justify-start m-3">
+                    <div class="w-4 h-4 border-red-300 border-2 mr-2"></div>
+                    <div>控笔训练1页</div>
+                </div>
+            </div>
+            
+
+            <div class=" bg-white col-span-7 mt-6 flex space-x-16 justify-center rounded-t-lg">
+                <div class="w-auto leading-10 flex justify-center items-center">
+                    <div>必须完成事项</div>
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 ml-2"></div>
+                </div>
+                <div class="w-auto leading-10 flex justify-center items-center">
+                    <div>选择完成事项</div>
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 ml-2"></div>
+                </div>
+                <div class="w-auto leading-10 flex justify-center items-center">
+                    <div>奶奶监督完成</div>
+                    <div class="w-4 h-4 bg-red-300 border-red-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 ml-2"></div>
+                </div>
+                <div class="w-auto leading-10 flex justify-center items-center">
+                    <div>爸爸监督完成</div>
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 ml-2"></div>
+                </div>
+                <div class="w-auto leading-10 flex justify-center items-center">
+                    <div>妈妈监督完成</div>
+                    <div class="w-4 h-4 bg-blue-300 border-blue-300 bg-opacity-50 border-2 ml-2"></div>
+                    <div class="w-4 h-4 bg-green-300 border-green-300 bg-opacity-50 border-2 ml-2"></div>
+                </div>
+            </div>
+            <div class=" col-span-7 bg-white border-0 flex justify-start pb-3 pl-7 text-sm break-words pr-5 rounded-b-lg text-gray-500 text-opacity-50">
+                TIP: 阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大大苏打阿萨大大
             </div>
         </div>
-        <div class="rounded-2xl border-2 w-full">
-            <div class="flex justify-between">
-                <div class="border-2 w-full" v-for="item in plan">
-                    <div v-for="taskItem in item.taskList">{{taskItem.taskName}}</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="bg-white" v-for="item in plan">
-
-            <div v-bind:class="{ 'rounded-l-lg': item.week == 'MON', 'rounded-r-lg': item.week == 'SUN', }" class="">
-                <div class="bg-blue-300">{{item.week}}</div>
-                <div class="h-12 flex items-center" v-show="item.tag != ''">{{item.tag}}</div>
-
-                <div class="border-2">
-                    <div v-if="item.lessonList != null" v-for="lessonItem in item.lessonList" class="w-12 h-12 border-2">
-                        {{lessonItem.lessonName}}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class=" bg-white" v-for="item in plan">
-            <div v-bind:class="{ 'rounded-l-lg': item.week == 'MON', 'rounded-r-lg': item.week == 'SUN', }" class="mt-10">
-                <div v-for="taskItem in item.taskList">
-                    {{taskItem.taskName}}
-                </div>
-            </div>
-        </div> -->
-        
     </div>
     
 </template>
-
-<style lang="scss" scoped>
-
-
-$hight-color: 100px;
-
-p {
-    height: $hight-color;
-}
-
-</style>
-
-<script lang="ts" setup>
-import Vue, { reactive } from 'vue'
-
-interface Plan {
-    week: String
-    tag: String
-    lessonList: Lesson[]
-    taskList: Task[]
-}
-
-interface Lesson {
-    lessonName: String
-    startTime: String
-    endTime: String
-}
-
-interface Task {
-    taskName: String
-    isMust: Boolean
-}
-
-const plan = [
-    {
-        "week": "MON",
-        "tag": "幼儿园时光",
-        "lessonList": null,
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "学能训练1页",
-                "isMust": true 
-            },
-            {
-                "taskName": "控笔训练1页",
-                "isMust": false 
-            },
-            {
-                "taskName": "感统1个动作",
-                "isMust": true 
-            },
-            {
-                "taskName": "篮球训练",
-                "isMust": true 
-            }
-        ]
-    },
-    {
-        "week": "TUE",
-        "tag": "幼儿园时光",
-        "lessonList": [
-            {
-                "lessonName": "画画",
-                "startTime": "18:30",
-                "endTime": "20:00"
-            }
-        ],
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "学能训练1页",
-                "isMust": true 
-            },
-            {
-                "taskName": "拼音学习1次",
-                "isMust": false 
-            },
-            {
-                "taskName": "英语指读1次",
-                "isMust": true 
-            }
-        ]
-    },
-    {
-        "week": "WEN",
-        "tag": "幼儿园时光",
-        "lessonList": [
-            {
-                "lessonName": "篮球",
-                "startTime": "18:30",
-                "endTime": "20:00"
-            }
-        ],
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "学能训练1页",
-                "isMust": true 
-            },
-            {
-                "taskName": "古诗学习1次",
-                "isMust": true 
-            }
-        ]
-    },
-    {
-        "week": "THU",
-        "tag": "幼儿园时光",
-        "lessonList": [
-            {
-                "lessonName": "英语",
-                "startTime": "16:50",
-                "endTime": "18:30"
-            }
-        ],
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "学能训练1页",
-                "isMust": true 
-            },
-            {
-                "taskName": "感统1个动作",
-                "isMust": true 
-            },
-            {
-                "taskName": "篮球训练",
-                "isMust": true 
-            },
-            {
-                "taskName": "古诗背诵1次",
-                "isMust": true 
-            }
-        ]
-    },
-    {
-        "week": "FRI",
-        "tag": "幼儿园时光",
-        "lessonList": null,
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "学能训练1页",
-                "isMust": true 
-            },
-            {
-                "taskName": "四五快读1篇",
-                "isMust": false 
-            },
-            {
-                "taskName": "思维练习1次",
-                "isMust": false 
-            },
-            {
-                "taskName": "英语指读1次",
-                "isMust": true 
-            }
-        ]
-    },
-    {
-        "week": "SAT",
-        "tag": "",
-        "lessonList":  [
-            {
-                "lessonName": "感统",
-                "startTime": "10:00",
-                "endTime": "12:00"
-            },
-            {
-                "lessonName": "篮球",
-                "startTime": "15:10",
-                "endTime": "18:40"
-            }
-        ],
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "编程学习1次",
-                "isMust": true 
-            },
-            {
-                "taskName": "古诗背诵1次",
-                "isMust": false 
-            }
-        ]
-    },
-    {
-        "week": "SUN",
-        "tag": "",
-        "lessonList":  [
-            {
-                "lessonName": "英语",
-                "startTime": "08:50",
-                "endTime": "10:30"
-            }
-        ],
-        "taskList": [
-            {
-                "taskName": "英语听60min",
-                "isMust": true 
-            },
-            {
-                "taskName": "英语指读1次",
-                "isMust": true 
-            },
-            {
-                "taskName": "感统一个动作",
-                "isMust": false 
-            }
-        ]
-    }
-]
-
-
-</script>
