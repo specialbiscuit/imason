@@ -17,6 +17,7 @@ declare module '@vue/runtime-core' {
     ElRow: typeof import('element-plus/es')['ElRow']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    Layout: typeof import('./src/components/Layout.vue')['default']
     Lesson: typeof import('./src/components/Lesson.vue')['default']
     Login: typeof import('./src/components/Login.vue')['default']
     MasonPlan: typeof import('./src/components/MasonPlan.vue')['default']

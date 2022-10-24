@@ -32,7 +32,14 @@
     const userStore = useUserStore()
     const router = useRouter()
 
-    const name = computed(() => userStore.$state.name)
+    const name = computed(() => {
+      console.log(11111)
+      if (userStore.$state.name == '') {
+        userStore.logout()
+        router.push('/Login')
+      }
+    })
+
     const isAdmin = computed(() => userStore.$state.isAdmin)
 
     const logout = () => {

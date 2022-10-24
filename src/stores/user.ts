@@ -21,7 +21,7 @@ export const useUserStore = defineStore({
               name: '',
               isAdmin: false,
             })
-      
+        
             // we could do other stuff like redirecting the user
         },
         /**
