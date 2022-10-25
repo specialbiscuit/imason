@@ -8,7 +8,6 @@ import './index.css';
 import 'animate.css';
 import { createPinia, PiniaPluginContext } from 'pinia'
 
-
 // 数据存储本地
 const setStorage = (key: string, value: any) => {
   localStorage.setItem(key, JSON.stringify(value))

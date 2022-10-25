@@ -7,7 +7,7 @@ const routes: RouteRecordRaw[] = [
     { path: '/T', name: 'T', component: () => import('../components/T.vue') },
     { path: '/Layout', name: 'Layout', component: () => import('../components/Layout.vue') },
     { path: '/PullRefresh', name: 'PullRefresh', component: () => import('../components/C-PullRefresh.vue') },
-    { path: '/Animate', name: 'Animate', component: () => import('../components/C-Animate.vue') },
+    { path: '/Animate', name: 'Animate', component: () => import('../components/C-Animate.vue'), meta: { icon: 'HomeFilled'} },
 ]
 
 const router = createRouter({  
