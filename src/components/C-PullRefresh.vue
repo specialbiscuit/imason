@@ -1,4 +1,3 @@
-<!-- 下拉刷新和上拉刷新 -->
 <template>
     <div>
       <!--标题-->
@@ -23,6 +22,7 @@
   </template>
   
   <script>
+  // 引入mescroll.min.js和mescroll.min.css
   import MeScroll from 'mescroll.js'
   import 'mescroll.js/mescroll.min.css'
   
@@ -39,7 +39,9 @@
       this.mescroll = new MeScroll(this.$refs.mescroll, {// 在mounted生命周期初始化mescroll,以确保您配置的dom元素能够被找到.
         down: {
           auto: false, // 是否在初始化完毕之后自动执行下拉回调callback; 默认true
-          callback: this.downCallback // 下拉刷新的回调
+          callback: this.downCallback, // 下拉刷新的回调
+          textInOffset: '下拉刷新11111',
+          htmlContent: '<p class="downwarp-progress">22222222</p><p class="downwarp-tip">3333333</p>'
         },
         up: {
           auto: true, // 是否在初始化时以上拉加载的方式自动加载第一页数据; 默认false
@@ -52,7 +54,7 @@
           toTop: { // 配置回到顶部按钮
             src: './static/mescroll/mescroll-totop.png'
           }
-        }
+        },
       })
     },
     beforeRouteEnter (to, from, next) { // 如果没有配置回到顶部按钮或isBounce,则beforeRouteEnter不用写
