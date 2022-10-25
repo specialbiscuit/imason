@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "animate.css": "^4.1.1",
     "async-validator": "^4.2.5",
     "element-plus": "^2.2.17",
-    "gsap": "^3.11.3",
     "mescroll.js": "^1.4.2",
     "path": "^0.12.7",
     "pinia": "^2.0.23",

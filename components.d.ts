@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CAnimate: typeof import('./src/components/C-Animate.vue')['default']
     CPullRefresh: typeof import('./src/components/C-PullRefresh.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
