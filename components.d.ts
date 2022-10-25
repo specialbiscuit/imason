@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CPullRefresh: typeof import('./src/components/C-PullRefresh.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
@@ -22,6 +23,8 @@ declare module '@vue/runtime-core' {
     Login: typeof import('./src/components/Login.vue')['default']
     MasonPlan: typeof import('./src/components/MasonPlan.vue')['default']
     Plan: typeof import('./src/components/Plan.vue')['default']
+    PullDown: typeof import('./src/components/PullDown.vue')['default']
+    PullRefresh: typeof import('./src/components/PullRefresh.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     T: typeof import('./src/components/T.vue')['default']
