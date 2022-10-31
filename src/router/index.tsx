@@ -8,6 +8,8 @@ const routes: RouteRecordRaw[] = [
     { path: '/Layout', name: 'Layout', component: () => import('../components/Layout.vue') },
     { path: '/PullRefresh', name: 'PullRefresh', component: () => import('../components/C-PullRefresh.vue') },
     { path: '/Animate', name: 'Animate', component: () => import('../components/C-Animate.vue'), meta: { icon: 'HomeFilled'} },
+    { path: '/BoxGeometry', name: 'BoxGeometry', component: () => import('../components/Three-BoxGeometry.vue')},
+    { path: '/Glb', name: 'Glb', component: () => import('../components/Three-Glb.vue')},
 ]
 
 const router = createRouter({  

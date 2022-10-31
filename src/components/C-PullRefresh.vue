@@ -40,8 +40,6 @@
         down: {
           auto: false, // 是否在初始化完毕之后自动执行下拉回调callback; 默认true
           callback: this.downCallback, // 下拉刷新的回调
-          textInOffset: '下拉刷新11111',
-          htmlContent: '<p class="downwarp-progress">22222222</p><p class="downwarp-tip">3333333</p>'
         },
         up: {
           auto: true, // 是否在初始化时以上拉加载的方式自动加载第一页数据; 默认false
@@ -203,6 +201,104 @@
       margin-top: 6px;
       margin-left: 10px;
       color: #666;
+    }
+
+
+
+    
+    /*下拉刷新--内容区,定位于区域底部*/
+    .mescroll-downwarp .downwarp-content{
+        height: 75px;
+        padding-bottom: 0;
+    }
+    /*下拉刷新--标语*/
+    .mescroll-downwarp .downwarp-slogan{
+        padding: 16px 0 0 18px;
+        font-size: 13px;
+        color: gray;
+    }
+    /*下拉刷新--进度提示*/
+    .mescroll-downwarp .downwarp-text{
+        font-size: 11px;
+        color: darkgray;
+    }
+    /*下拉刷新--向下进度动画*/
+    .mescroll-downwarp .downwarp-progress{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: auto;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        margin-right: 0;
+        margin-left: -90px;
+    }
+    /*下拉刷新--人*/
+    .mescroll-downwarp .downwarp-man{
+        width: 50px;
+        vertical-align: middle;
+        -webkit-transform-origin: left 60%;
+        transform-origin: left bottom;
+    }
+    /*下拉刷新--盒子*/
+    .mescroll-downwarp .downwarp-box{
+        width: 18px;
+        margin-top: 10px;
+        margin-left: -20px;
+        vertical-align: middle;
+        -webkit-transform-origin: right -100%;
+        transform-origin: right -100%;
+    }
+    /*下拉刷新--进度条*/
+    .mescroll-downwarp .downwarp-loading{
+        /*display: none; 不预先隐藏,避免首次显示动画时,图片没及时加载完毕导致短暂的白屏*/
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -88px;
+        width: 50px;
+        height: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-animation: animManRun .3s steps(1,start) infinite;
+        animation: animManRun .3s steps(1,start) infinite;
+    }
+    @-webkit-keyframes animManRun {
+        0% {background-image: url(option/mescroll-progress2.png)}
+        40% {background-image: url(option/mescroll-progress3.png)}
+        70% {background-image: url(option/mescroll-progress4.png)}
+        100% {background-image: url(option/mescroll-progress2.png)}
+    }
+
+    .mescroll-downwarp .downwarp-loading:before{
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        margin-left: -60px;
+        content: '';
+        width: 40px;
+        height: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(option/mescroll-progress5.png);
+    }
+
+    /*上拉加载--进度条*/
+    .mescroll-upwarp .upwarp-progress{
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border: none;
+        background-image: url(option/mescroll-loading2.png);
+        background-size: contain;
+    }
+    .mescroll-upwarp .upwarp-loading{
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-image: url(option/mescroll-loading1.png);
+        background-size: contain;
     }
   </style>
   

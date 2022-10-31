@@ -30,6 +30,9 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     T: typeof import('./src/components/T.vue')['default']
     Table: typeof import('./src/components/Table.vue')['default']
+    Three: typeof import('./src/components/Three.vue')['default']
+    ThreeBoxGeometry: typeof import('./src/components/Three-BoxGeometry.vue')['default']
+    ThreeGlb: typeof import('./src/components/Three-Glb.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']

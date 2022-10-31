@@ -5,3 +5,7 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module "three/Three.js"
+declare module "three-orbitcontrols/OrbitControls.js"
+declare module "utils/Base3d.js"
