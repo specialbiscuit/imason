@@ -2,7 +2,7 @@
   <Renderer ref="renderer" antialias :orbit-ctrl="{ enableDamping: true }" resize="window">
     <Camera :position="{ x: 20, y: 20, z: 20 }" />
     <Scene background="#ffffff">
-      <AmbientLight></AmbientLight>
+      <HemisphereLight></HemisphereLight>
       <GltfModel src="models/gltf/cz.glb" @load="onReady" @progress="onProgress" @error="onError"/>
     </Scene>
   </Renderer>
@@ -11,6 +11,8 @@
 <script>
 import {
   AmbientLight,
+  DirectionalLight,
+  HemisphereLight,
   Camera,
   GltfModel,
   Renderer,
@@ -19,6 +21,8 @@ import {
 export default {
   components: {
     AmbientLight,
+    DirectionalLight,
+    HemisphereLight,
     Camera,
     GltfModel,
     Renderer,
