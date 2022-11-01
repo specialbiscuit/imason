@@ -387,22 +387,10 @@
   "resolved" "https://registry.npmmirror.com/@types/node/-/node-18.11.0.tgz"
   "version" "18.11.0"
 
-"@types/three@^0.144.0":
-  "integrity" "sha512-psvEs6q5rLN50jUYZ3D4pZMfxTbdt3A243blt0my7/NcL6chaCZpHe2csbCtx0SOD9fI/XnF3wnVUAYZGqCSYg=="
-  "resolved" "https://registry.npmmirror.com/@types/three/-/three-0.144.0.tgz"
-  "version" "0.144.0"
-  dependencies:
-    "@types/webxr" "*"
-
 "@types/web-bluetooth@^0.0.15":
   "integrity" "sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA=="
   "resolved" "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.15.tgz"
   "version" "0.0.15"
-
-"@types/webxr@*":
-  "integrity" "sha512-IUMDPSXnYIbEO2IereEFcgcqfDREOgmbGqtrMpVPpACTU6pltYLwHgVkrnYv0XhWEcjio9sYEfIEzgn3c7nDqA=="
-  "resolved" "https://registry.npmmirror.com/@types/webxr/-/webxr-0.5.0.tgz"
-  "version" "0.5.0"
 
 "@vitejs/plugin-vue-jsx@^2.0.1":
   "integrity" "sha512-lmiR1k9+lrF7LMczO0pxtQ8mOn6XeppJDHxnpxkJQpT5SiKz4SKhKdeNstXaTNuR8qZhUo5X0pJlcocn72Y4Jg=="
@@ -1409,10 +1397,10 @@
   "resolved" "https://registry.npmmirror.com/three-orbitcontrols/-/three-orbitcontrols-2.110.3.tgz"
   "version" "2.110.3"
 
-"three@^0.145.0", "three@>= 0.110.0":
-  "integrity" "sha512-EKoHQEtEJ4CB6b2BGMBgLZrfwLjXcSUfoI/MiIXUuRpeYsfK5aPWbYhdtIVWOH+x6X0TouldHKHBuc/LAiFzAw=="
-  "resolved" "https://registry.npmmirror.com/three/-/three-0.145.0.tgz"
-  "version" "0.145.0"
+"three@^0.134.0", "three@>= 0.110.0":
+  "integrity" "sha512-LbBerg7GaSPjYtTOnu41AMp7tV6efUNR3p4Wk5NzkSsNTBuA5mDGOfwwZL1jhhVMLx9V20HolIUo0+U3AXehbg=="
+  "resolved" "https://registry.npmmirror.com/three/-/three-0.134.0.tgz"
+  "version" "0.134.0"
 
 "to-fast-properties@^2.0.0":
   "integrity" "sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog=="
@@ -1425,6 +1413,11 @@
   "version" "5.0.1"
   dependencies:
     "is-number" "^7.0.0"
+
+"troisjs@^0.3.4":
+  "integrity" "sha512-aonG2lw+QyTjytJpvYIaGv2AiIKzm+eSYT4ByG64uVh+jCLAWxnblS6bCewIckvCMqs2j3z351Q/IFIPWYViCQ=="
+  "resolved" "https://registry.npmmirror.com/troisjs/-/troisjs-0.3.4.tgz"
+  "version" "0.3.4"
 
 "typescript@*", "typescript@^4.6.4", "typescript@>=4.4.4":
   "integrity" "sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ=="

@@ -4,6 +4,8 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader' //导入RGB�
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls' //导入控制器模块，轨道控制器
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' //导入GLTF模块，模型解析器,根据文件格式来定
 
+import { RoomEnvironment  } from "three/examples/jsm/environments/RoomEnvironment";
+
 
 class Base3d {
     constructor(selector) {
@@ -22,6 +24,7 @@ class Base3d {
         this.initCamera()
         //初始化渲染器
         this.initRender()
+        this.setEnvMap('')
         //初始化控制器，控制摄像头,控制器一定要在渲染器后
         this.initControls()
         // 添加物体模型
@@ -31,7 +34,7 @@ class Base3d {
     }
     initScene() {
         this.scene = new THREE.Scene()
-        this.setEnvMap('aircraft_workshop_01_4k')
+        // this.setEnvMap('aircraft_workshop_01_4k')
     }
     initCamera() {
         this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 200)
@@ -50,11 +53,34 @@ class Base3d {
         this.container.appendChild(this.renderer.domElement)
     }
     setEnvMap(hdr) { //设置环境背景
-        new RGBELoader().setPath('./models/gltf/').load(hdr+'.hdr', (texture) => {
+
+        // const axesHelper = new THREE.AxesHelper(12); 
+        this.scene.background = new THREE.Color( 0xbfe3dd );
+        // this.scene.add(axesHelper);           
+
+        const grid = new THREE.GridHelper(1000, 1000, 0xFF0000, 0x444444);            
+        grid.material.opacity = 0.4;
+        grid.material.transparent = false;
+        grid.rotation.x = Math.PI/2.0;
+        this.scene.add(grid);     
+        
+
+        new RGBELoader().load((texture) => {
             texture.mapping = EquirectangularReflectionMapping  //圆柱形形纹理映射
             this.scene.background = texture
             this.scene.environment = texture
         })
+        
+        // const pmremGenerator = new THREE.PMREMGenerator( this.renderer );
+        // this.scene.background = new THREE.Color( 0xbfe3dd );
+        // this.scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
+
+
+        // new RGBELoader().setPath('./models/gltf/').load(hdr+'.hdr', (texture) => {
+        //     texture.mapping = EquirectangularReflectionMapping  //圆柱形形纹理映射
+        //     this.scene.background = texture
+        //     this.scene.environment = texture
+        // })
     }
     render() {
         this.renderer.render(this.scene, this.camera)
@@ -78,7 +104,7 @@ class Base3d {
         })
     }
     addMesh() {
-        this.setModel('cz1.glb')
+        this.setModel('airplane63.gltf')
     }
     onWindowResize() { //调整屏幕大小
         this.camera.aspect = window.innerWidth / window.innerHeight //摄像机宽高比例

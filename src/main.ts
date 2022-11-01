@@ -7,6 +7,7 @@ import 'element-plus/dist/index.css';
 import './index.css';
 import 'animate.css';
 import { createPinia, PiniaPluginContext } from 'pinia'
+import { TroisJSVuePlugin } from 'troisjs';
 
 // 数据存储本地
 const setStorage = (key: string, value: any) => {
@@ -40,6 +41,7 @@ const app = createApp(App)
 app.use(router)
 app.use(ElementPlus)
 app.use(pinia)
+app.use(TroisJSVuePlugin)
 
 const win: any = window
 console.log(process.env.NODE_ENV)
