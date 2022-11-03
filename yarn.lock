@@ -370,6 +370,19 @@
     "estree-walker" "^2.0.1"
     "picomatch" "^2.2.2"
 
+"@types/aframe@^1.2.0":
+  "integrity" "sha512-hlqxbAkrGZftxTSaa0Phwfsi3mAxR/ND8o1sMQqefEbRPhxqaShe1ilFWQQb/2OYkJneWbUOAxsQLGxYAMPH+g=="
+  "resolved" "https://registry.npmmirror.com/@types/aframe/-/aframe-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "@types/animejs" "*"
+    "@types/three" "*"
+
+"@types/animejs@*":
+  "integrity" "sha512-jYlEdbVTOOLBz1mauqhrigFUFAGde2KCdO/99asxHpF+5zOdz/VjNKbnpNa0oNBhsDNFzmMvvE+V4C8ZkvJdKg=="
+  "resolved" "https://registry.npmmirror.com/@types/animejs/-/animejs-3.1.6.tgz"
+  "version" "3.1.6"
+
 "@types/lodash-es@*", "@types/lodash-es@^4.17.6":
   "integrity" "sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg=="
   "resolved" "https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.6.tgz"
@@ -387,10 +400,22 @@
   "resolved" "https://registry.npmmirror.com/@types/node/-/node-18.11.0.tgz"
   "version" "18.11.0"
 
+"@types/three@*":
+  "integrity" "sha512-psvEs6q5rLN50jUYZ3D4pZMfxTbdt3A243blt0my7/NcL6chaCZpHe2csbCtx0SOD9fI/XnF3wnVUAYZGqCSYg=="
+  "resolved" "https://registry.npmmirror.com/@types/three/-/three-0.144.0.tgz"
+  "version" "0.144.0"
+  dependencies:
+    "@types/webxr" "*"
+
 "@types/web-bluetooth@^0.0.15":
   "integrity" "sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA=="
   "resolved" "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.15.tgz"
   "version" "0.0.15"
+
+"@types/webxr@*":
+  "integrity" "sha512-IUMDPSXnYIbEO2IereEFcgcqfDREOgmbGqtrMpVPpACTU6pltYLwHgVkrnYv0XhWEcjio9sYEfIEzgn3c7nDqA=="
+  "resolved" "https://registry.npmmirror.com/@types/webxr/-/webxr-0.5.0.tgz"
+  "version" "0.5.0"
 
 "@vitejs/plugin-vue-jsx@^2.0.1":
   "integrity" "sha512-lmiR1k9+lrF7LMczO0pxtQ8mOn6XeppJDHxnpxkJQpT5SiKz4SKhKdeNstXaTNuR8qZhUo5X0pJlcocn72Y4Jg=="

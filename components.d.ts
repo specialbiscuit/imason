@@ -33,6 +33,7 @@ declare module '@vue/runtime-core' {
     Three: typeof import('./src/components/Three.vue')['default']
     ThreeBoxGeometry: typeof import('./src/components/Three-BoxGeometry.vue')['default']
     ThreeGlb: typeof import('./src/components/Three-Glb.vue')['default']
+    ThreePure: typeof import('./src/components/Three-Pure.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']

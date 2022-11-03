@@ -1,47 +1,83 @@
 <template>
   <Renderer ref="renderer" antialias :orbit-ctrl="{ enableDamping: true }" resize="window">
-    <Camera :position="{ x: 20, y: 20, z: 20 }" />
-    <Scene background="#ffffff">
-      <HemisphereLight></HemisphereLight>
-      <GltfModel src="models/gltf/cz.glb" @load="onReady" @progress="onProgress" @error="onError"/>
+    <Camera ref="camera" :position="{ x: 20, y: 20, z: 20 }" look-at=""/>
+    <Scene ref="scene" background="#353535">
+      <!-- <DirectionalLight
+        :position="{ x: 100, y: 150, z: 50 }"
+        cast-shadow :shadow-camera="{ top: 180, bottom: -120, left: -120, right: 120 }"
+      /> -->
+      <PointLight color="#ffffff" :intensity="1" :position="{ x: 0, y: 150, z: 75 }" :cast-shadow="true" :shadow-map-size="{ width: 0, height: 0 }"/>
+      <AmbientLight color="#ffffff" :intensity="1" :position="{ x: 150, y: 75, z: 150 }"></AmbientLight>
+      
+      <!-- <AmbientLight color="#ffffff" :intensity="1.2"></AmbientLight> -->
+      <!-- <Plane :width="200" :height="2000" :rotation="{ x: -Math.PI / 2 }" receive-shadow>
+        <PhongMaterial color="#999999" :props="{ depthWrite: false }" />
+      </Plane> -->
+      <GltfModel ref="gltf" src="models/gltf/sz1.glb" @load="onReady" @progress="onProgress" @error="onError" />
+      <!-- <Model src="models/gltf/sz1.glb" @load="onReady" @progress="onProgress" @error="onError" ></Model> -->
     </Scene>
   </Renderer>
 </template>
 
 <script>
+import { AnimationMixer, Clock, Fog, GridHelper, Vector3 } from 'three';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import {
+  PointLight,
+  RectAreaLight,
   AmbientLight,
   DirectionalLight,
   HemisphereLight,
+  Plane,
   Camera,
   GltfModel,
   Renderer,
   Scene,
 } from 'troisjs';
+
 export default {
   components: {
+    PointLight,
+    RectAreaLight,
     AmbientLight,
     DirectionalLight,
     HemisphereLight,
+    Plane,
     Camera,
     GltfModel,
     Renderer,
     Scene,
   },
-  
+  mounted() {
+    const scene = this.$refs.scene.scene;
+    console.log(scene)
+
+
+    const camera = this.$refs.camera.camera;
+    console.log(camera)
+    // scene.fog = new Fog(0xa0a0a0, 200, 1000);
+    // const grid = new GridHelper(200, 20, 0x000000, 0x000000);
+    // grid.material.opacity = 0.5;
+    // grid.material.transparent = true;
+    // this.$refs.scene.add(grid);
+  },
   methods: {
     onReady(model){
-      console.log("onReady")
-      console.log(model)
+      
+      // console.log("onReady")
+      // console.log(model)
+
+      // this.$refs.gltf.
+
       // model.Scene.traverse
-      model.scene.traverse(o => {
-        if (o.isMesh){
-          // handle both multiple and single materials
-          const asArray = Array.isArray(o.material) ? o.material : [o.material]
-          // 0 works for matte materials - change as needed
-          asArray.forEach(mat => mat.metalness = 0)
-        }
-      })
+      // model.scene.traverse(o => {
+      //   if (o.isMesh){
+      //     // handle both multiple and single materials
+      //     const asArray = Array.isArray(o.material) ? o.material : [o.material]
+      //     // 0 works for matte materials - change as needed
+      //     asArray.forEach(mat => mat.metalness = 0.3)
+      //   }
+      // })
     },
     onProgress() {
       console.log("onProcess")

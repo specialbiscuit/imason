@@ -10,3 +10,5 @@ declare module "three/Three.js"
 declare module "three-orbitcontrols/OrbitControls.js"
 declare module "utils/Base3d.js"
 declare module "vue-3d-model"
+
+declare module "../aframe.min.js"

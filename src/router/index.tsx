@@ -10,6 +10,7 @@ const routes: RouteRecordRaw[] = [
     { path: '/Animate', name: 'Animate', component: () => import('../components/C-Animate.vue'), meta: { icon: 'HomeFilled'} },
     { path: '/BoxGeometry', name: 'BoxGeometry', component: () => import('../components/Three-BoxGeometry.vue')},
     { path: '/Glb', name: 'Glb', component: () => import('../components/Three-Glb.vue')},
+    { path: '/Pure', name: 'Pure', component: () => import('../components/Three-Pure.vue')},
 ]
 
 const router = createRouter({  

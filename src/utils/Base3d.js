@@ -54,28 +54,31 @@ class Base3d {
     }
     setEnvMap(hdr) { //设置环境背景
 
+        // 坐标轴渲染
         // const axesHelper = new THREE.AxesHelper(12); 
         this.scene.background = new THREE.Color( 0xbfe3dd );
         // this.scene.add(axesHelper);           
 
+        // 网格渲染
         const grid = new THREE.GridHelper(1000, 1000, 0xFF0000, 0x444444);            
         grid.material.opacity = 0.4;
         grid.material.transparent = false;
         grid.rotation.x = Math.PI/2.0;
         this.scene.add(grid);     
         
-
         new RGBELoader().load((texture) => {
             texture.mapping = EquirectangularReflectionMapping  //圆柱形形纹理映射
             this.scene.background = texture
             this.scene.environment = texture
         })
         
+        // 背景色渲染
         // const pmremGenerator = new THREE.PMREMGenerator( this.renderer );
         // this.scene.background = new THREE.Color( 0xbfe3dd );
         // this.scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
 
 
+        // GLTF模型渲染
         // new RGBELoader().setPath('./models/gltf/').load(hdr+'.hdr', (texture) => {
         //     texture.mapping = EquirectangularReflectionMapping  //圆柱形形纹理映射
         //     this.scene.background = texture
@@ -92,7 +95,14 @@ class Base3d {
         this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     }
     //加载模型
-    setModel(modelName) {
+    async setModel(modelName) {
+        const loader = new GLTFLoader().setPath('models/gltf/')
+        return await loader.load(modelName, (gltf) => {
+            console.log(gltf);
+            this.model = gltf.scenes[0]
+            this.scene.add(this.model)
+            // resolve(this.modelName + '模型添加成功')
+        })
         return new Promise((resolve, reject) => {
             const loader = new GLTFLoader().setPath('models/gltf/')
             loader.load(modelName, (gltf) => {
