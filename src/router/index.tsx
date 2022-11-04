@@ -1,16 +1,14 @@
 import { createRouter, createWebHistory,  RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [  
-    { path: '/', name: 'test', component: () => import('../components/Test') },
-    { path: '/Login', name: 'Login', component: () => import('../components/Login.vue') },
-    { path: '/Plan', name: 'Plan', component: () => import('../components/Plan.vue') },
-    { path: '/T', name: 'T', component: () => import('../components/T.vue') },
-    { path: '/Layout', name: 'Layout', component: () => import('../components/Layout.vue') },
-    { path: '/PullRefresh', name: 'PullRefresh', component: () => import('../components/C-PullRefresh.vue') },
-    { path: '/Animate', name: 'Animate', component: () => import('../components/C-Animate.vue'), meta: { icon: 'HomeFilled'} },
-    { path: '/BoxGeometry', name: 'BoxGeometry', component: () => import('../components/Three-BoxGeometry.vue')},
-    { path: '/Glb', name: 'Glb', component: () => import('../components/Three-Glb.vue')},
-    { path: '/Pure', name: 'Pure', component: () => import('../components/Three-Pure.vue')},
+    { path: '/', name: 'test', component: () => import('@/views/Three-Pure.vue') },
+    { path: '/Login', name: 'Login', component: () => import('@/views/Login.vue') },
+    { path: '/Plan', name: 'Plan', component: () => import('@/views/Plan.vue') },
+    { path: '/T', name: 'T', component: () => import('@/views/T.vue') },
+    { path: '/Layout', name: 'Layout', component: () => import('@/views/Layout.vue') },
+    { path: '/PullRefresh', name: 'PullRefresh', component: () => import('@/views/C-PullRefresh.vue') },
+    { path: '/Animate', name: 'Animate', component: () => import('@/views/C-Animate.vue'), meta: { icon: 'HomeFilled'} },
+    { path: '/Pure', name: 'Pure', component: () => import('@/views/Three-Pure.vue')},
 ]
 
 const router = createRouter({  

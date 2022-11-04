@@ -7,19 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    CAnimate: typeof import('./src/components/C-Animate.vue')['default']
-    CPullRefresh: typeof import('./src/components/C-PullRefresh.vue')['default']
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
-    Layout: typeof import('./src/components/Layout.vue')['default']
-    Login: typeof import('./src/components/Login.vue')['default']
-    Plan: typeof import('./src/components/Plan.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    T: typeof import('./src/components/T.vue')['default']
-    ThreeBoxGeometry: typeof import('./src/components/Three-BoxGeometry.vue')['default']
-    ThreeGlb: typeof import('./src/components/Three-Glb.vue')['default']
-    ThreePure: typeof import('./src/components/Three-Pure.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
